@@ -1,0 +1,253 @@
+You are a principal AI architect, security-aware system designer, and full-stack engineer.
+
+Design and generate a COMPLETE production-grade Agentic AI-powered pharmacy platform with secure authentication, multi-role dashboards, agentic AI automation, WhatsApp notifications, and explainable safety-first decision making.
+
+========================================
+PROJECT OVERVIEW
+========================================
+The system transforms a traditional pharmacy into an autonomous AI-driven ecosystem. It behaves like a virtual expert pharmacist capable of understanding natural language and voice input, extracting medicine details, enforcing prescription rules, predicting refill needs, managing inventory, and executing order fulfillment autonomously.
+
+The platform must support TWO ROLES:
+1. Customer / User
+2. Pharmacist / Shop Owner
+
+========================================
+AUTHENTICATION & ROLE MANAGEMENT
+========================================
+
+-------------------------
+USER REGISTRATION FLOW
+-------------------------
+Collect:
+- Full Name
+- Phone Number (used for WhatsApp)
+- Email
+- Address
+- Password
+
+SYSTEM BEHAVIOR:
+- Generate a UNIQUE USER ID (example: USER-AX93FQ)
+- Store securely
+- Display User ID in a popup after registration
+- User logs in using: USER ID + Password
+
+-------------------------
+USER LOGIN FLOW
+-------------------------
+After login, show USER DASHBOARD with:
+1. AI Pharmacist Chat Interface
+2. Medicine Ordering
+3. Prescription Upload
+4. Predictive Refill Alerts
+5. WhatsApp Notification Status
+6. Order History
+7. Explainable Decision Panel
+
+-----------------------------------
+PHARMACIST REGISTRATION FLOW
+-----------------------------------
+Collect:
+- Pharmacist Name
+- Shop Name
+- GST Number (unique)
+- License Number
+- Shop Address
+- Phone Number (WhatsApp enabled)
+- Email
+- Password
+
+-----------------------------------
+PHARMACIST LOGIN FLOW
+-----------------------------------
+Login using:
+- GST Number
+- Password
+
+After login show PHARMACIST DASHBOARD with:
+1. Shop Overview
+2. Inventory Management
+3. Order Review & Approval
+4. Prescription Verification
+5. Refill Demand Analytics
+6. Human Review / Escalation Panel
+7. Sales Summary
+8. Shop Profile Management
+
+========================================
+WHATSAPP NOTIFICATION SYSTEM
+========================================
+Integrate WhatsApp messaging (mock or API-based).
+
+SEND WHATSAPP MESSAGES FOR:
+1. User Registration Confirmation (User ID)
+2. Order Confirmation
+3. Order Approval / Rejection Explanation
+4. Refill Reminder
+5. Medicine Expiry Reminder
+
+MEDICINE REMINDER LOGIC:
+- Track medicine start date and duration
+- Send reminders like:
+  "Your medicine dose will expire in 2–3 days"
+  "Time to refill your medicine"
+- Allow configurable reminder timing
+
+========================================
+MULTI-AGENT AI ARCHITECTURE
+========================================
+
+Agents:
+1. Conversation Agent (voice/text)
+2. Entity Extraction Agent (with confidence score)
+3. Safety & Policy Agent
+4. Inventory Agent
+5. Refill Prediction Agent
+6. Order Orchestration Agent
+7. Observability & Audit Agent
+8. Human Review Agent
+
+All agents communicate using structured JSON.
+
+========================================
+TECH STACK
+========================================
+
+FRONTEND:
+- React.js (Vite)
+- Tailwind CSS
+- Axios
+- Role-based routing
+- Web Speech API
+
+BACKEND:
+- Python FastAPI
+- JWT Authentication
+- Role-based authorization
+- Background tasks for reminders
+- WhatsApp API integration (mock or real)
+
+DATABASE:
+- PostgreSQL or SQLite
+
+Tables:
+- Users
+- Pharmacists
+- Shops
+- Medicines
+- Inventory
+- Orders
+- Prescriptions
+- Refill Predictions
+- Reminder Schedules
+- Audit Logs
+
+========================================
+CORE SYSTEM FLOWS
+========================================
+
+USER ORDER FLOW:
+User → Chat Agent → Extraction → Safety Check → Inventory → Decision → WhatsApp Confirmation → Audit Log
+
+PHARMACIST FLOW:
+Order Review → Prescription Validation → Approval / Rejection → WhatsApp Update → Inventory Update
+
+REMINDER FLOW:
+Scheduled Job → Detect expiry/refill → Send WhatsApp reminder → Log event
+
+========================================
+FRONTEND UI REQUIREMENTS
+========================================
+
+COMMON:
+- Clean healthcare UI
+- Responsive dashboards
+- Status badges and alerts
+
+USER SCREENS:
+- Login / Registration
+- User Dashboard
+- AI Chat Pharmacist
+- Order Tracking
+- Refill & Expiry Notifications
+- Profile & Prescription Upload
+
+PHARMACIST SCREENS:
+- GST Login / Registration
+- Shop Dashboard
+- Inventory Panel
+- Order Review Panel
+- Escalation Console
+- Analytics Dashboard
+
+========================================
+SECURITY & SAFETY
+========================================
+- Password hashing
+- JWT authentication
+- GST uniqueness validation
+- Prescription enforcement
+- Dosage limits
+- Abuse detection
+- Explainable rejections
+
+========================================
+OBSERVABILITY & AUDITABILITY
+========================================
+Log:
+- Agent reasoning
+- Policy checks
+- Order lifecycle
+- WhatsApp messages sent
+- Human overrides
+
+========================================
+API DESIGN
+========================================
+
+AUTH:
+- /auth/user-register
+- /auth/user-login
+- /auth/pharmacist-register
+- /auth/pharmacist-login
+
+CORE:
+- /chat
+- /extract-entities
+- /validate-order
+- /orders
+- /inventory
+- /predict-refills
+- /schedule-reminder
+- /audit-logs
+- /whatsapp/send
+
+========================================
+DELIVERABLES
+========================================
+1. System architecture
+2. Folder structure
+3. Database schema
+4. Backend FastAPI code
+5. React frontend code
+6. Agent logic pseudocode
+7. WhatsApp reminder logic
+8. Example user journeys
+9. README (without deployment)
+
+========================================
+OUTPUT INSTRUCTIONS
+========================================
+Generate the system step-by-step:
+
+STEP 1 → Authentication & Role Design  
+STEP 2 → Architecture & Agent Design  
+STEP 3 → Database Schema  
+STEP 4 → Backend APIs  
+STEP 5 → Agent Logic  
+STEP 6 → Frontend UI  
+STEP 7 → Observability & WhatsApp Logging  
+STEP 8 → Full Integration Guide  
+
+Do NOT include deployment steps.
+Do NOT skip steps.
+Focus on realism, safety, and explainability.
